@@ -1,5 +1,7 @@
-resource "aws_default_route_table" "route-table-public" {
-  default_route_table_id = aws_vpc.main.default_route_table_id
+
+resource "aws_route_table" "route-table-public" {
+    vpc_id = aws_vpc.main.id
+
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -12,15 +14,19 @@ resource "aws_default_route_table" "route-table-public" {
 }
 
 
-resource "aws_default_route_table" "route-table-private" {
-  default_route_table_id = aws_vpc.main.default_route_table_id
+resource "aws_route_table" "route-table-private" {
+      vpc_id = aws_vpc.main.id
+ 
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aaws_nat_gateway.vpc-nat-gateway.id
+    gateway_id = aws_nat_gateway.vpc-nat-gateway.id
   }
 
   tags = {
     Name = "route-table-private"
   }
 }
+
+
+
