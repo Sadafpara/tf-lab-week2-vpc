@@ -6,7 +6,7 @@ resource "aws_subnet" "public-subnet1" {
 
 
   tags = {
-    Name = "public-subnet1 for u-central-1a"
+    Name = "public-subnet1-a"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "public-subnet2" {
 
 
   tags = {
-    Name = "public-subnet2 for u-central-1b"
+    Name = "public-subnet2-b"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "public-subnet3" {
 
 
   tags = {
-    Name = "public-subnet3 for u-central-1c"
+    Name = "public-subnet3-c"
   }
 }
 
@@ -47,7 +47,7 @@ resource "aws_subnet" "private-subnet1" {
 
 
   tags = {
-    Name = "private-subnet1 for u-central-1a"
+    Name = "private-subnet1-a"
   }
 }
 
@@ -59,7 +59,7 @@ resource "aws_subnet" "private-subnet2" {
 
 
   tags = {
-    Name = "private-subnet2 for u-central-1b"
+    Name = "private-subnet2-b"
   }
 }
 
@@ -72,6 +72,6 @@ resource "aws_subnet" "private-subnet3" {
 
 
   tags = {
-    Name = "private-subnet3 for u-central-1c"
+    Name = "private-subnet3-c"
   }
 }
